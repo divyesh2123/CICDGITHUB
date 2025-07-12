@@ -1,8 +1,16 @@
-# Welcome to your CDK TypeScript project
 
-This is a blank project for CDK development with TypeScript.
+# AWS CDK Lambda API Project with CI/CD
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+This project uses AWS CDK (TypeScript) to deploy a Node.js Lambda function and an API Gateway endpoint that returns user data. It is integrated with GitHub Actions for CI/CD, so every commit to the `main` branch will automatically deploy the Lambda and API Gateway to AWS.
+
+## Lambda Function
+The Lambda function is located in `lambda/userdata.js` and returns a sample user object as JSON.
+
+## API Gateway
+An API Gateway is created with a `/userdata` endpoint that triggers the Lambda function.
+
+## CI/CD
+GitHub Actions workflow is defined in `.github/workflows/ci-cd.yml` to deploy the stack on every commit to `main`.
 
 ## Useful commands
 
